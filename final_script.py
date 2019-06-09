@@ -10,6 +10,7 @@ from concurrent.futures import CancelledError
 import aiohttp
 import datetime
 import numpy as np
+from concurrent.futures import CancelledError
 
 
 async def send_data(data):
@@ -106,6 +107,9 @@ if __name__ == '__main__':
             time.sleep(15)
             print("I am here")
     except KeyboardInterrupt:
+        asyncio.gather(*asyncio.Task.all_tasks()).cancel()
+        print("Canceled tasks")
+    except CancelledError:
         asyncio.gather(*asyncio.Task.all_tasks()).cancel()
         print("Canceled tasks")
     finally:
