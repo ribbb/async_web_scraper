@@ -24,3 +24,5 @@ pip install pymongo
 Script takes in the name of csv as the second argument so the whole command is
 
 python final_script.py example.csv
+
+It also needs mongodb running on the computer. Here is a guide how to set that up: https://medium.com/@saivittalb/introduction-to-mongodb-859ed4426994 only installation part is required.
