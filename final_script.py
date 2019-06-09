@@ -97,7 +97,7 @@ Program flow is: Loop through the csv --> Clean data from csv --> Asyncronously 
 if __name__ == '__main__':
     try:
         LOOP = asyncio.get_event_loop()
-        CSV_NAME = "./input.csv"
+        CSV_NAME = sys.argv[1]
         #asyncio.ensure_future(main("./input.csv", LOOP))
         while True:
             print("Starting url check")
