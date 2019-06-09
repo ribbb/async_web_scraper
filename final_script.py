@@ -89,7 +89,10 @@ async def main(batch, LOOP):
         await send_data(result)
 
 
-
+'''
+Program flow is: Loop through the csv --> Clean data from csv --> Asyncronously call websites -
+-> Check regex against response body --> Save statistics to database.
+''' 
 if __name__ == '__main__':
     try:
         LOOP = asyncio.get_event_loop()
