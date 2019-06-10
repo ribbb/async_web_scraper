@@ -10,7 +10,9 @@ Example csv shows how csv is supposed to be formated.
 
 # Installation:
 
-Script needs:
+Script needs python version 3.6 or 3.7 to work
+
+Script also needs:
 
 pip install aiohttp
 
